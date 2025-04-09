@@ -3,14 +3,25 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:AvaloniaBlackJack.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d"
+             d:DesignWidth="700"
+             d:DesignHeight="450"
              x:Class="AvaloniaBlackJack.Views.MainView"
              x:DataType="vm:MainViewModel">
+
   <Design.DataContext>
-    <!-- This only sets the DataContext for the previewer in an IDE,
-         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
     <vm:MainViewModel />
   </Design.DataContext>
 
-  <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+  <Grid>
+    <!-- Background image -->
+    <Image Source="avares://AvaloniaBlackJack/Assets/background.jpg"
+           Stretch="UniformToFill" />
+
+    <!-- Your actual UI -->
+    <StackPanel FlowDirection="LeftToRight" VerticalAlignment="Center" Spacing="1" HorizontalAlignment="Left" Orientation="Horizontal" IsVisible="True" IsEnabled="True" Name="stackPanel_PlayerCards" x:Name="stackPanel_PlayerCards">
+      <Image Source="/Assets/Cards/Card backs/b1fv.png" Width="78" Height="78" x:Name="playerCard_1"></Image>
+      <Image Source="/Assets/Cards/Card backs/b1fv.png" Width="78" Height="78" x:Name="playerCard_2"></Image>
+    </StackPanel>
+  </Grid>
 </UserControl>

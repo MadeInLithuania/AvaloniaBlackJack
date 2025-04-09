@@ -1,4 +1,6 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using AvaloniaBlackJack.Data;
+using CommunityToolkit.Mvvm.ComponentModel;
+using Microsoft.VisualBasic;
 
 namespace AvaloniaBlackJack.ViewModels
 {

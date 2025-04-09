@@ -8,5 +8,5 @@
         x:Class="AvaloniaBlackJack.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="AvaloniaBlackJack">
-        <views:MainView />
+        <views:MainView />  
 </Window>
