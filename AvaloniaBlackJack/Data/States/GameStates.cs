@@ -16,6 +16,8 @@ namespace AvaloniaBlackJack.Data.States
         TIE,
         DEFEAT,
         BLACKJACK_WIN,
-        BLACKJACK_DEFEAT
+        BLACKJACK_DEFEAT,
+        GAME_STARTED, 
+        GAME_STOPPED,
     }
 }

@@ -5,23 +5,94 @@
              xmlns:vm="clr-namespace:AvaloniaBlackJack.ViewModels"
              mc:Ignorable="d"
              d:DesignWidth="700"
-             d:DesignHeight="450"
+             d:DesignHeight="350"
              x:Class="AvaloniaBlackJack.Views.MainView"
              x:DataType="vm:MainViewModel">
 
-  <Design.DataContext>
-    <vm:MainViewModel />
-  </Design.DataContext>
-
+  <!-- Root Grid with Background -->
   <Grid>
-    <!-- Background image -->
+    <!-- Background Image covering the whole UserControl -->
     <Image Source="avares://AvaloniaBlackJack/Assets/background.jpg"
-           Stretch="UniformToFill" />
+           Stretch="UniformToFill"
+           IsHitTestVisible="False"
+           ZIndex="0" />
 
-    <!-- Your actual UI -->
-    <StackPanel FlowDirection="LeftToRight" VerticalAlignment="Center" Spacing="1" HorizontalAlignment="Left" Orientation="Horizontal" IsVisible="True" IsEnabled="True" Name="stackPanel_PlayerCards" x:Name="stackPanel_PlayerCards">
-      <Image Source="/Assets/Cards/Card backs/b1fv.png" Width="78" Height="78" x:Name="playerCard_1"></Image>
-      <Image Source="/Assets/Cards/Card backs/b1fv.png" Width="78" Height="78" x:Name="playerCard_2"></Image>
-    </StackPanel>
+    <!-- Content Area -->
+    <DockPanel LastChildFill="True" ZIndex="1">
+      <!-- Toolbar -->
+      <Border DockPanel.Dock="Top" ZIndex="2" Background="{DynamicResource ThemeBackgroundBrush}" Padding="8">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+          </Grid.ColumnDefinitions>
+          
+          <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Center" Spacing="10">
+            <Button Content="NEW-GAME" Command="{Binding NewGameCommand}" />
+            <Button Content="SHUFFLE" Command="{Binding ShuffleCommand}" />
+            <Button Content="CARD" Command="{Binding DealCardCommand}" />
+            <Button Content="END" Command="{Binding EndGameCommand}" />
+            <Button Content="SETTINGS" Command="{Binding OpenSettingsCommand}" />
+            <Button Content="TOGGLE" Command="{Binding ToggleGameCommand}" />
+          </StackPanel>                 
+        </Grid>
+      </Border>
+
+      <!-- Main Content -->
+      <Border Padding="25">
+        <!-- Optional semi-transparent panel -->
+        <Grid ShowGridLines="True">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+          </Grid.ColumnDefinitions>
+
+          <!-- PLAYER -->
+          <StackPanel Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+              <TextBlock FontSize="18" HorizontalAlignment="Center" Foreground="White" Margin="0,0,0,15">PLAYER</TextBlock>
+              <TextBlock FontSize="18" HorizontalAlignment="Center" Foreground="White" Margin="10,0,0,0" Text="{Binding Credits}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+              <Image Source="{Binding PlayerCard1Source}" Width="85"/>
+              <Image Source="{Binding PlayerCard2Source}" Width="85"/>
+            </StackPanel>
+          </StackPanel>
+
+          <!-- Center Column -->
+          <StackPanel Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <StackPanel>
+              <TextBlock FontSize="18" HorizontalAlignment="Center" Foreground="White" Margin="0,0,0,15">BET</TextBlock>
+              <TextBox Text="{Binding BetAmount}" />
+            </StackPanel>
+          </StackPanel>
+          <!-- CASINO -->
+          <StackPanel Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <TextBlock FontSize="18" HorizontalAlignment="Center" Foreground="White" Margin="0,0,0,15">CASINO</TextBlock>
+            <StackPanel Orientation="Horizontal">
+              <Image Source="{Binding CasinoCard1Source}" Width="85"/>
+              <Image Source="{Binding CasinoCard2Source}" Width="85"/>
+            </StackPanel>
+          </StackPanel>
+        </Grid>
+      </Border>
+    </DockPanel>
+    <!-- Toast Notification Overlay -->
+    <Border ZIndex="10" 
+            IsVisible="{Binding IsToastVisible}"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            Margin="0,20,0,0"
+            Background="{Binding ToastBackgroundColor}"
+            CornerRadius="8"
+            Padding="16,12"
+            MaxWidth="400">
+      <TextBlock Text="{Binding ToastMessage}" 
+                 Foreground="Black" 
+                 FontWeight="Medium"
+                 TextWrapping="Wrap"
+                 HorizontalAlignment="Center" />
+    </Border>
   </Grid>
 </UserControl>

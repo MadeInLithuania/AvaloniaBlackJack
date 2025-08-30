@@ -1,0 +1,262 @@
+[
+    {
+      "Value": 2,
+      "ID": "2H",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/2H.png"
+    },
+    {
+      "Value": 3,
+      "ID": "3H",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/3H.png"
+    },
+    {
+      "Value": 4,
+      "ID": "4H",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/4H.png"
+    },
+    {
+      "Value": 5,
+      "ID": "5H",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/5H.png"
+    },
+    {
+      "Value": 6,
+      "ID": "6H",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/6H.png"
+    },
+    {
+      "Value": 7,
+      "ID": "7H",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/7H.png"
+    },
+    {
+      "Value": 8,
+      "ID": "8H",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/8H.png"
+    },
+    {
+      "Value": 9,
+      "ID": "9H",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/9H.png"
+    },
+    {
+      "Value": 10,
+      "ID": "10H",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/10H.png"
+    },
+    {
+      "Value": 10,
+      "ID": "JH",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/JH.png"
+    },
+    {
+      "Value": 10,
+      "ID": "QH",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/QH.png"
+    },
+    {
+      "Value": 10,
+      "ID": "KH",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/KH.png"
+    },
+    {
+      "Value": 11,
+      "ID": "AH",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/AH.png"
+    },
+    {
+      "Value": 2,
+      "ID": "2C",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/2C.png"
+    },
+    {
+      "Value": 3,
+      "ID": "3C",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/3C.png"
+    },
+    {
+      "Value": 4,
+      "ID": "4C",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/4C.png"
+    },
+    {
+      "Value": 5,
+      "ID": "5C",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/5C.png"
+    },
+    {
+      "Value": 6,
+      "ID": "6C",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/6C.png"
+    },
+    {
+      "Value": 7,
+      "ID": "7C",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/7C.png"
+    },
+    {
+      "Value": 8,
+      "ID": "8C",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/8C.png"
+    },
+    {
+      "Value": 9,
+      "ID": "9C",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/9C.png"
+    },
+    {
+      "Value": 10,
+      "ID": "10C",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/10C.png"
+    },
+    {
+      "Value": 10,
+      "ID": "JC",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/JC.png"
+    },
+    {
+      "Value": 10,
+      "ID": "QC",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/QC.png"
+    },
+    {
+      "Value": 10,
+      "ID": "KC",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/KC.png"
+    },
+    {
+      "Value": 11,
+      "ID": "AC",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/AC.png"
+    },
+    {
+      "Value": 2,
+      "ID": "2D",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/2D.png"
+    },
+    {
+      "Value": 3,
+      "ID": "3D",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/3D.png"
+    },
+    {
+      "Value": 4,
+      "ID": "4D",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/4D.png"
+    },
+    {
+      "Value": 5,
+      "ID": "5D",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/5D.png"
+    },
+    {
+      "Value": 6,
+      "ID": "6D",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/6D.png"
+    },
+    {
+      "Value": 7,
+      "ID": "7D",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/7D.png"
+    },
+    {
+      "Value": 8,
+      "ID": "8D",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/8D.png"
+    },
+    {
+      "Value": 9,
+      "ID": "9D",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/9D.png"
+    },
+    {
+      "Value": 10,
+      "ID": "10D",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/10D.png"
+    },
+    {
+      "Value": 10,
+      "ID": "JD",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/JD.png"
+    },
+    {
+      "Value": 10,
+      "ID": "QD",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/QD.png"
+    },
+    {
+      "Value": 10,
+      "ID": "KD",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/KD.png"
+    },
+    {
+      "Value": 11,
+      "ID": "AD",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/AD.png"
+    },
+    {
+      "Value": 2,
+      "ID": "2S",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/2S.png"
+    },
+    {
+      "Value": 3,
+      "ID": "3S",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/3S.png"
+    },
+    {
+      "Value": 4,
+      "ID": "4S",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/4S.png"
+    },
+    {
+      "Value": 5,
+      "ID": "5S",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/5S.png"
+    },
+    {
+      "Value": 6,
+      "ID": "6S",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/6S.png"
+    },
+    {
+      "Value": 7,
+      "ID": "7S",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/7S.png"
+    },
+    {
+      "Value": 8,
+      "ID": "8S",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/8S.png"
+    },
+    {
+      "Value": 9,
+      "ID": "9S",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/9S.png"
+    },
+    {
+      "Value": 10,
+      "ID": "10S",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/10S.png"
+    },
+    {
+      "Value": 10,
+      "ID": "JS",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/JS.png"
+    },
+    {
+      "Value": 10,
+      "ID": "QS",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/QS.png"
+    },
+    {
+      "Value": 10,
+      "ID": "KS",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/KS.png"
+    },
+    {
+      "Value": 11,
+      "ID": "AS",
+      "ImageUrl": "avares://AvaloniaBlackJack/Assets/Cards/AS.png"
+    }
+]
