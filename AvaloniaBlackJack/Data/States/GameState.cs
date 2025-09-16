@@ -11,6 +11,7 @@ namespace AvaloniaBlackJack.Data.States
     /// </summary>
     public class GameState
     {
+        private GameState _gameState;
         public GameState() { }
         public GameState(GameStates gameStates) { }
 

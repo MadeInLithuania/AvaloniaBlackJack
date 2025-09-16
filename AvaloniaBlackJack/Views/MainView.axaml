@@ -2,26 +2,184 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="clr-namespace:AvaloniaBlackJack.ViewModels"
              mc:Ignorable="d"
-             d:DesignWidth="700"
-             d:DesignHeight="450"
-             x:Class="AvaloniaBlackJack.Views.MainView"
-             x:DataType="vm:MainViewModel">
+             d:DesignWidth="1200"
+             d:DesignHeight="800"
+             x:Class="AvaloniaBlackJack.Views.MainView">
 
-  <Design.DataContext>
-    <vm:MainViewModel />
-  </Design.DataContext>
+  <UserControl.Styles>
+    <Style Selector="Button.game-button">
+      <Setter Property="Background" Value="#2E7D32"/>
+      <Setter Property="Foreground" Value="White"/>
+      <Setter Property="FontSize" Value="16"/>
+      <Setter Property="FontWeight" Value="Bold"/>
+      <Setter Property="Padding" Value="20,10"/>
+      <Setter Property="Margin" Value="5"/>
+      <Setter Property="BorderBrush" Value="#FFF"/>
+      <Setter Property="BorderThickness" Value="2"/>
+      <Setter Property="CornerRadius" Value="8"/>
+      <Setter Property="MinWidth" Value="120"/>
+      <Setter Property="MinHeight" Value="50"/>
+    </Style>
+    
+    <Style Selector="Button.game-button:disabled">
+      <Setter Property="Background" Value="#757575"/>
+      <Setter Property="BorderBrush" Value="#616161"/>
+      <Setter Property="Foreground" Value="#BDBDBD"/>
+    </Style>
+    
+    <Style Selector="Button.game-button:pointerover">
+      <Setter Property="Background" Value="#388E3C"/>
+    </Style>
+    
+    <Style Selector="Button.game-button:pressed">
+      <Setter Property="Background" Value="#1B5E20"/>
+    </Style>
+
+    <Style Selector="TextBlock.game-status">
+      <Setter Property="FontSize" Value="20"/>
+      <Setter Property="FontWeight" Value="Bold"/>
+      <Setter Property="Foreground" Value="White"/>
+      <Setter Property="HorizontalAlignment" Value="Center"/>
+      <Setter Property="Margin" Value="10"/>
+    </Style>
+
+    <Style Selector="Border.card-area">
+      <Setter Property="Background" Value="#143b00"/>
+      <Setter Property="CornerRadius" Value="15"/>
+      <Setter Property="BorderBrush" Value="#FFF"/>
+      <Setter Property="BorderThickness" Value="3"/>
+      <Setter Property="Margin" Value="10"/>
+      <Setter Property="Padding" Value="20"/>
+      <!--<Setter Property="Opacity" Value="0.5"/>-->
+    </Style>
+
+    <Style Selector="Border.game-table">
+      <Setter Property="CornerRadius" Value="20"/>
+      <Setter Property="BorderBrush" Value="#FFF"/>
+      <Setter Property="BorderThickness" Value="5"/>
+      <Setter Property="Margin" Value="20"/>
+    </Style>
+  </UserControl.Styles>
 
   <Grid>
-    <!-- Background image -->
+    <!-- Background Image -->
     <Image Source="avares://AvaloniaBlackJack/Assets/background.jpg"
            Stretch="UniformToFill" />
 
-    <!-- Your actual UI -->
-    <StackPanel FlowDirection="LeftToRight" VerticalAlignment="Center" Spacing="1" HorizontalAlignment="Left" Orientation="Horizontal" IsVisible="True" IsEnabled="True" Name="stackPanel_PlayerCards" x:Name="stackPanel_PlayerCards">
-      <Image Source="/Assets/Cards/Card backs/b1fv.png" Width="78" Height="78" x:Name="playerCard_1"></Image>
-      <Image Source="/Assets/Cards/Card backs/b1fv.png" Width="78" Height="78" x:Name="playerCard_2"></Image>
-    </StackPanel>
+    <!-- Main Game Table -->
+    <Border Classes="game-table" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center"
+            MinWidth="1100" 
+            MinHeight="700">
+      
+      <Grid Margin="30">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Game Title -->
+        <TextBlock Grid.Row="0" 
+                   Text="Blackjack" 
+                   FontSize="36" 
+                   FontWeight="Bold" 
+                   Foreground="#FFD700" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,0,0,20"/>
+
+        <!-- Dealer Area -->
+        <Border Grid.Row="1" Classes="card-area">
+          <StackPanel>
+            <TextBlock Text="DEALER : N/A" 
+                       FontSize="20" 
+                       FontWeight="Bold" 
+                       Foreground="#FFD700" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,0,0,10"/>
+            
+            <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Center" 
+                        Spacing="10">
+              <!-- Dealer's visible card -->
+              <Image Source="avares://AvaloniaBlackJack/Assets/Cards/Card backs/b1fv.png" 
+                     Width="80" 
+                     Height="120" 
+                     RenderOptions.BitmapInterpolationMode="HighQuality"/>
+              
+              <!-- Hidden card placeholder -->
+              <Image Source="avares://AvaloniaBlackJack/Assets/Cards/Card backs/b1fv.png" 
+                     Width="80" 
+                     Height="120"/>
+            </StackPanel>                      
+          </StackPanel>
+        </Border>
+
+        <!-- Game Status -->
+        <TextBlock Grid.Row="2" 
+                   Text="TURN" 
+                   Classes="game-status"/>
+
+        <!-- Player Area -->
+        <Border Grid.Row="3" Classes="card-area">
+          <StackPanel>
+            <TextBlock Text="PLAYER : N/A" 
+                       FontSize="20" 
+                       FontWeight="Bold" 
+                       Foreground="#FFD700" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,0,0,10"/>
+            
+            <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Center" 
+                        Spacing="10">
+              <!-- Player's cards -->
+              <Image Source="avares://AvaloniaBlackJack/Assets/Cards/Card backs/b1fv.png" 
+                     Width="80" 
+                     Height="120" 
+                     RenderOptions.BitmapInterpolationMode="HighQuality"/>
+              
+              <Image Source="avares://AvaloniaBlackJack/Assets/Cards/Card backs/b1fv.png" 
+                     Width="80" 
+                     Height="120" 
+                     RenderOptions.BitmapInterpolationMode="HighQuality"/>
+
+            </StackPanel>
+          </StackPanel>
+        </Border>
+
+        <!-- Game Controls -->
+        <StackPanel Grid.Row="4" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Center" 
+                    Margin="0,20,0,0">
+          
+          <Button Content="🃏 NEW GAME" 
+                  Classes="game-button"/>
+          
+          <Button Content="🎯 HIT" 
+                  Classes="game-button"/>
+          
+          <Button Content="✋ STAND" 
+                  Classes="game-button"/>
+          
+          <Button Content="💰 DOUBLE DOWN" 
+                  Classes="game-button"/>
+        </StackPanel>
+      </Grid>
+    </Border>
+
+    <!-- Decorative elements -->
+    <Canvas>
+      <!-- Corner decorations -->
+      <TextBlock Canvas.Left="50" Canvas.Top="50" Text="♠" FontSize="48" Foreground="#2E7D32" Opacity="0.3"/>
+      <TextBlock Canvas.Right="50" Canvas.Top="50" Text="♥" FontSize="48" Foreground="#2E7D32" Opacity="0.3"/>
+      <TextBlock Canvas.Left="50" Canvas.Bottom="50" Text="♣" FontSize="48" Foreground="#2E7D32" Opacity="0.3"/>
+      <TextBlock Canvas.Right="50" Canvas.Bottom="50" Text="♦" FontSize="48" Foreground="#2E7D32" Opacity="0.3"/>
+    </Canvas>
   </Grid>
 </UserControl>
